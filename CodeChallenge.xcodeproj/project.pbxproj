@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F31A0918285B3DA200209601 /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0917285B3DA200209601 /* OverviewTableViewController.swift */; };
+		F31A0919285B3DA200209601 /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0917285B3DA200209601 /* OverviewTableViewController.swift */; };
+		F31A091A285B3DA200209601 /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0917285B3DA200209601 /* OverviewTableViewController.swift */; };
+		F31A091D285B721000209601 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A091C285B721000209601 /* PostData.swift */; };
+		F31A091E285B721000209601 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A091C285B721000209601 /* PostData.swift */; };
+		F31A091F285B721000209601 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A091C285B721000209601 /* PostData.swift */; };
 		F3549608285B15D800E38B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3549607285B15D800E38B8D /* AppDelegate.swift */; };
 		F354960A285B15D800E38B8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3549609285B15D800E38B8D /* SceneDelegate.swift */; };
 		F354960C285B15D800E38B8D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354960B285B15D800E38B8D /* EntryViewController.swift */; };
@@ -38,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F31A0917285B3DA200209601 /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewController.swift; sourceTree = "<group>"; };
+		F31A091C285B721000209601 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		F3549604285B15D800E38B8D /* CodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3549607285B15D800E38B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3549609285B15D800E38B8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +88,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F31A091B285B70AD00209601 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F354960B285B15D800E38B8D /* EntryViewController.swift */,
+				F31A0917285B3DA200209601 /* OverviewTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F31A0920285B73B000209601 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F31A091C285B721000209601 /* PostData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F35495FB285B15D800E38B8D = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +128,10 @@
 		F3549606285B15D800E38B8D /* CodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F31A0920285B73B000209601 /* Model */,
+				F31A091B285B70AD00209601 /* ViewControllers */,
 				F3549607285B15D800E38B8D /* AppDelegate.swift */,
 				F3549609285B15D800E38B8D /* SceneDelegate.swift */,
-				F354960B285B15D800E38B8D /* EntryViewController.swift */,
 				F354960D285B15D800E38B8D /* Main.storyboard */,
 				F3549610285B15DC00E38B8D /* Assets.xcassets */,
 				F3549612285B15DC00E38B8D /* LaunchScreen.storyboard */,
@@ -269,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31A091D285B721000209601 /* PostData.swift in Sources */,
 				F354960C285B15D800E38B8D /* EntryViewController.swift in Sources */,
 				F3549608285B15D800E38B8D /* AppDelegate.swift in Sources */,
+				F31A0918285B3DA200209601 /* OverviewTableViewController.swift in Sources */,
 				F354960A285B15D800E38B8D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31A0919285B3DA200209601 /* OverviewTableViewController.swift in Sources */,
+				F31A091E285B721000209601 /* PostData.swift in Sources */,
 				F354961F285B15DC00E38B8D /* CodeChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +317,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31A091A285B3DA200209601 /* OverviewTableViewController.swift in Sources */,
+				F31A091F285B721000209601 /* PostData.swift in Sources */,
 				F3549629285B15DC00E38B8D /* CodeChallengeUITests.swift in Sources */,
 				F354962B285B15DC00E38B8D /* CodeChallengeUITestsLaunchTests.swift in Sources */,
 			);
