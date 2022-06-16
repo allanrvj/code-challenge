@@ -11,9 +11,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Test comment
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        //Testing
+    }
 
 }
 
