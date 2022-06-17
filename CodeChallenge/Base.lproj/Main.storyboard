@@ -146,7 +146,7 @@
                     </view>
                     <connections>
                         <outlet property="currencyTextField" destination="Ss0-Bv-7PG" id="dZ8-cw-GQ7"/>
-                        <outlet property="currentDate" destination="paj-vL-lao" id="NjW-qA-1dF"/>
+                        <outlet property="currentDateLabel" destination="paj-vL-lao" id="NjW-qA-1dF"/>
                         <outlet property="descriptionTextField" destination="7wV-BT-mIm" id="s94-IS-5cw"/>
                         <outlet property="imageView" destination="nuU-wf-NKV" id="6ac-yC-cg4"/>
                         <outlet property="totalTextField" destination="40f-Rs-oyg" id="ULl-03-QGG"/>
