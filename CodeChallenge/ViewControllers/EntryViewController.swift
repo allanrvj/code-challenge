@@ -18,7 +18,7 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
 
     private var imagePicker: UIImagePickerController!
     private var imagePicked: UIImage!
-    private var imageFilename: URL!
+    private var imageFilename: String!
     
     private var keyboardToolbar = UIToolbar()
     private var activeTextField: UITextField?
@@ -73,21 +73,18 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
         
         // get the location of documents directory
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        if imagePicked != nil, let data = imagePicked.pngData() {
-            imageFilename = documents.appendingPathComponent("\(UUID().uuidString).png")
+        if imagePicked != nil, let data = imagePicked.jpegData(compressionQuality: 1.0) {
+            
+            imageFilename = "\(UUID().uuidString).jpeg"
+            let destinationFilename = documents.appendingPathComponent(imageFilename)
             do {
-                try data.write(to: imageFilename)
+                try data.write(to: destinationFilename)
                 // Open a local realm
                 let localRealm = try! Realm()
-                print("path: \(imageFilename.absoluteString)")
-                let postData = PostData(imageAddress: imageFilename.absoluteString)
-                print("date: \(currentDateString!)")
+                let postData = PostData(imageAddress: imageFilename)
                 postData.date = currentDateString!
-                print("total: \(totalTextField.text!)")
                 postData.total = totalTextField.text!
-                print("currency: \(currencyTextField.text!)")
                 postData.currency = currencyTextField.text!
-                print("descString: \(descriptionTextField.text!)")
                 postData.descString = descriptionTextField.text!
                 
                 try localRealm.write({

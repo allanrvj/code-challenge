@@ -16,6 +16,9 @@
 		F31A0923285CB22400209601 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0922285CB22400209601 /* Utils.swift */; };
 		F31A0924285CB22400209601 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0922285CB22400209601 /* Utils.swift */; };
 		F31A0925285CB22400209601 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0922285CB22400209601 /* Utils.swift */; };
+		F31A0927285CCCCC00209601 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0926285CCCCC00209601 /* PostViewController.swift */; };
+		F31A0928285CCCCC00209601 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0926285CCCCC00209601 /* PostViewController.swift */; };
+		F31A0929285CCCCC00209601 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31A0926285CCCCC00209601 /* PostViewController.swift */; };
 		F3549608285B15D800E38B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3549607285B15D800E38B8D /* AppDelegate.swift */; };
 		F354960A285B15D800E38B8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3549609285B15D800E38B8D /* SceneDelegate.swift */; };
 		F354960C285B15D800E38B8D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354960B285B15D800E38B8D /* EntryViewController.swift */; };
@@ -50,6 +53,7 @@
 		F31A0917285B3DA200209601 /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewController.swift; sourceTree = "<group>"; };
 		F31A091C285B721000209601 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		F31A0922285CB22400209601 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F31A0926285CCCCC00209601 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F3549604285B15D800E38B8D /* CodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3549607285B15D800E38B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3549609285B15D800E38B8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 			children = (
 				F354960B285B15D800E38B8D /* EntryViewController.swift */,
 				F31A0917285B3DA200209601 /* OverviewTableViewController.swift */,
+				F31A0926285CCCCC00209601 /* PostViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			files = (
 				F31A091D285B721000209601 /* PostData.swift in Sources */,
 				F31A0923285CB22400209601 /* Utils.swift in Sources */,
+				F31A0927285CCCCC00209601 /* PostViewController.swift in Sources */,
 				F354960C285B15D800E38B8D /* EntryViewController.swift in Sources */,
 				F3549608285B15D800E38B8D /* AppDelegate.swift in Sources */,
 				F31A0918285B3DA200209601 /* OverviewTableViewController.swift in Sources */,
@@ -325,6 +331,7 @@
 				F31A0924285CB22400209601 /* Utils.swift in Sources */,
 				F31A091E285B721000209601 /* PostData.swift in Sources */,
 				F354961F285B15DC00E38B8D /* CodeChallengeTests.swift in Sources */,
+				F31A0928285CCCCC00209601 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31A0929285CCCCC00209601 /* PostViewController.swift in Sources */,
 				F31A0925285CB22400209601 /* Utils.swift in Sources */,
 				F31A091A285B3DA200209601 /* OverviewTableViewController.swift in Sources */,
 				F31A091F285B721000209601 /* PostData.swift in Sources */,

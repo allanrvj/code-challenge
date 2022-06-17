@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class Utils {
     
@@ -21,4 +22,16 @@ class Utils {
         return outputDate
     }
 
+    static func getAllPostDataFromRealm() -> [PostData] {
+        let realm = try! Realm()
+        let postDataObjects = realm.objects(PostData.self)
+        return postDataObjects.toArray(type: PostData.self)
+    }
+
+}
+
+extension Results {
+    func toArray<T>(type: T.Type) -> [T] {
+        return compactMap { $0 as? T }
+    }
 }
