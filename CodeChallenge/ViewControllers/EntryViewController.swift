@@ -175,11 +175,11 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
         if let _ = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, activeTextField != nil {
             
             if activeTextField == totalTextField {
-                view.frame.origin.y = -150
+                view.frame.origin.y = -155
             } else if activeTextField == currencyTextField {
-                view.frame.origin.y = -200
+                view.frame.origin.y = -215
             } else if activeTextField == descriptionTextField {
-                view.frame.origin.y = -250
+                view.frame.origin.y = -275
             }
             
         }

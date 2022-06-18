@@ -10,30 +10,24 @@ import UIKit
 class PostViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var postData: PostData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         loadImage()
+        dateLabel.text = postData.date
+        totalLabel.text = postData.total
+        currencyLabel.text = postData.currency
+        descriptionLabel.text = postData.descString
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     private func loadImage() {
-        print("postData: \(postData.imageAddress)")
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let imageURL = documents.appendingPathComponent(postData.imageAddress)
         let image = UIImage(contentsOfFile: imageURL.path)
