@@ -10,14 +10,14 @@ import RealmSwift
 
 class PostData: Object {
     
-    @Persisted var imageAddress: String = ""
+    @Persisted var imageName: String = ""
     @Persisted var date: String = ""
     @Persisted var total: String = ""
     @Persisted var currency: String = ""
     @Persisted var descString: String = ""
     
-    convenience init(imageAddress: String) {
+    convenience init(imageName: String) {
         self.init()
-        self.imageAddress = imageAddress
+        self.imageName = imageName
     }
 }

@@ -29,6 +29,7 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
         super.viewDidLoad()
         modalPresentationCapturesStatusBarAppearance = true
         
+        // Prev, Next, OK buttons on top of the keyboard
         keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44))
         keyboardToolbar.barStyle = .default
         keyboardToolbar.backgroundColor = .white
@@ -39,13 +40,13 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
             UIBarButtonItem(title: "OK", style: UIBarButtonItem.Style.plain, target: self, action: #selector(endEditing))
         ]
         
-        totalTextField.delegate = self
-        currencyTextField.delegate = self
-        descriptionTextField.delegate = self
-        
         totalTextField.inputAccessoryView = keyboardToolbar
         currencyTextField.inputAccessoryView = keyboardToolbar
         descriptionTextField.inputAccessoryView = keyboardToolbar
+        
+        totalTextField.delegate = self
+        currencyTextField.delegate = self
+        descriptionTextField.delegate = self
         
         registerForKeyboardNotifications()
     }
@@ -78,16 +79,19 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
             imageFilename = "\(UUID().uuidString).jpeg"
             let destinationFilename = documents.appendingPathComponent(imageFilename)
             do {
+                // Save the image to the documents directory
                 try data.write(to: destinationFilename)
+                print("File saved: \(destinationFilename)")
                 // Open a local realm
                 let localRealm = try! Realm()
-                let postData = PostData(imageAddress: imageFilename)
+                let postData = PostData(imageName: imageFilename)
                 postData.date = currentDateString!
                 postData.total = totalTextField.text!
                 postData.currency = currencyTextField.text!
                 postData.descString = descriptionTextField.text!
                 
                 try localRealm.write({
+                    // Save the details to the Realm DB.
                     localRealm.add(postData)
                 })
                 
@@ -116,7 +120,6 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true)
         imagePicked = info[.originalImage] as? UIImage
-        
         
         imageView.image = imagePicked
     }
@@ -172,20 +175,27 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
     }
     
     @objc private func keyboardWillShow(_ notification: Notification) {
+        // When keyboard is activated upon a text field being in focus,
+        // raise the view so that the keyboard is not blocking the text field
         if let _ = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, activeTextField != nil {
             
-            if activeTextField == totalTextField {
-                view.frame.origin.y = -155
-            } else if activeTextField == currencyTextField {
-                view.frame.origin.y = -215
-            } else if activeTextField == descriptionTextField {
-                view.frame.origin.y = -275
+            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                // Calculate how much to raise based on keyboard height and text field y-position
+                if activeTextField == totalTextField {
+                    view.frame.origin.y = -(totalTextField.frame.origin.y - keyboardHeight)
+                } else if activeTextField == currencyTextField {
+                    view.frame.origin.y = -(currencyTextField.frame.origin.y - keyboardHeight)
+                } else if activeTextField == descriptionTextField {
+                    view.frame.origin.y = -(descriptionTextField.frame.origin.y - keyboardHeight)
+                }
             }
-            
         }
     }
     
     @objc private func keyboardWillHide(_ notification: Notification) {
+        // Reset the position of the view
         view.frame.origin.y = 0
     }
 }

@@ -78,7 +78,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-gb-DtS">
-                                <rect key="frame" x="62" y="525" width="290" height="21"/>
+                                <rect key="frame" x="62" y="496" width="290" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="rKO-Uo-gi5"/>
                                 </constraints>
@@ -87,7 +87,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5y-gL-oSs">
-                                <rect key="frame" x="62" y="576" width="290" height="21"/>
+                                <rect key="frame" x="62" y="547" width="290" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="MK0-fW-6tY"/>
                                 </constraints>
@@ -96,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H7-RW-SlG">
-                                <rect key="frame" x="62" y="623" width="290" height="21"/>
+                                <rect key="frame" x="62" y="594" width="290" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="bnw-jV-jcH"/>
                                 </constraints>
@@ -105,7 +105,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcw-Sl-W2W">
-                                <rect key="frame" x="62" y="604.5" width="290" height="18"/>
+                                <rect key="frame" x="62" y="575.5" width="290" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="XoG-2d-1gg"/>
                                 </constraints>
@@ -114,7 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ka-RD-0x2">
-                                <rect key="frame" x="62" y="675" width="290" height="21"/>
+                                <rect key="frame" x="62" y="646" width="290" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="yKA-Kk-8i4"/>
                                 </constraints>
@@ -123,7 +123,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8z-bX-h0o">
-                                <rect key="frame" x="62" y="506.5" width="290" height="18"/>
+                                <rect key="frame" x="62" y="477.5" width="290" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="1x1-iQ-YFa"/>
                                 </constraints>
@@ -132,7 +132,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlI-Nm-2Cf">
-                                <rect key="frame" x="62" y="557.5" width="290" height="18"/>
+                                <rect key="frame" x="62" y="528.5" width="290" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="Yts-o6-AW0"/>
                                 </constraints>
@@ -140,8 +140,20 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiN-wm-l4h">
+                                <rect key="frame" x="179.5" y="774" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="V4r-hu-BVX"/>
+                                    <constraint firstAttribute="height" constant="55" id="mwP-u1-PyW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="trash.fill" catalog="system" title=" "/>
+                                <connections>
+                                    <action selector="deleteItem:" destination="zhB-0r-d39" eventType="touchUpInside" id="Vgf-UG-Yzj"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-Rb-FFh">
-                                <rect key="frame" x="62" y="656.5" width="290" height="18"/>
+                                <rect key="frame" x="62" y="627.5" width="290" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="7rc-xD-laV"/>
                                 </constraints>
@@ -159,17 +171,19 @@
                             <constraint firstItem="G5y-gL-oSs" firstAttribute="top" secondItem="Bgi-gb-DtS" secondAttribute="bottom" constant="30" id="Edk-MY-4PY"/>
                             <constraint firstItem="G8z-bX-h0o" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="FYp-U4-Wez"/>
                             <constraint firstItem="Bgi-gb-DtS" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="FwC-Hy-Etd"/>
+                            <constraint firstItem="AiN-wm-l4h" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="Hgl-7Z-jEm"/>
                             <constraint firstItem="Xge-Rb-FFh" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="Hoe-aO-sv6"/>
                             <constraint firstItem="G5y-gL-oSs" firstAttribute="firstBaseline" secondItem="SlI-Nm-2Cf" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="IMR-qQ-BRG"/>
                             <constraint firstItem="4ka-RD-0x2" firstAttribute="firstBaseline" secondItem="Xge-Rb-FFh" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="IUG-sI-kgi"/>
                             <constraint firstItem="4ka-RD-0x2" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="J4f-ZE-Tdi"/>
                             <constraint firstItem="b2x-Gd-4e7" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="Lf0-tu-vvj"/>
                             <constraint firstItem="4H7-RW-SlG" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="XoD-UT-MC8"/>
-                            <constraint firstItem="Bgi-gb-DtS" firstAttribute="top" secondItem="b2x-Gd-4e7" secondAttribute="bottom" constant="129" id="qDo-eY-gXX"/>
+                            <constraint firstItem="Bgi-gb-DtS" firstAttribute="top" secondItem="b2x-Gd-4e7" secondAttribute="bottom" constant="100" id="qDo-eY-gXX"/>
                             <constraint firstItem="4ka-RD-0x2" firstAttribute="top" secondItem="4H7-RW-SlG" secondAttribute="bottom" constant="31" id="vrY-dX-xa2"/>
                             <constraint firstItem="4H7-RW-SlG" firstAttribute="top" secondItem="G5y-gL-oSs" secondAttribute="bottom" constant="26" id="w6g-mo-EZi"/>
                             <constraint firstItem="G5y-gL-oSs" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="wQn-Lh-80C"/>
                             <constraint firstItem="Bgi-gb-DtS" firstAttribute="firstBaseline" secondItem="G8z-bX-h0o" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="xMm-fh-x5T"/>
+                            <constraint firstItem="G8Y-jm-ipc" firstAttribute="bottom" secondItem="AiN-wm-l4h" secondAttribute="bottom" constant="33" id="z6l-l0-tAY"/>
                             <constraint firstItem="dcw-Sl-W2W" firstAttribute="centerX" secondItem="G8Y-jm-ipc" secondAttribute="centerX" id="zwX-jF-csp"/>
                         </constraints>
                     </view>
@@ -215,7 +229,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="eSI-yY-ya9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paj-vL-lao">
                                 <rect key="frame" x="57.5" y="508" width="299" height="21"/>
@@ -364,6 +378,7 @@
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
