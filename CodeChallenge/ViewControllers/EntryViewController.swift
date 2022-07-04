@@ -20,7 +20,6 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
     private var imagePicked: UIImage!
     private var imageFilename: String!
     
-    private var keyboardToolbar = UIToolbar()
     private var activeTextField: UITextField?
 
     private var currentDateString: String?
@@ -30,7 +29,7 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
         modalPresentationCapturesStatusBarAppearance = true
         
         // Prev, Next, OK buttons on top of the keyboard
-        keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44))
+        let keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44))
         keyboardToolbar.barStyle = .default
         keyboardToolbar.backgroundColor = .white
         keyboardToolbar.items = [
@@ -136,22 +135,21 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
     }
     
     @objc internal func endEditing() {
-        if activeTextField == nil { return }
-        activeTextField!.resignFirstResponder()
+        activeTextField?.resignFirstResponder()
     }
     
     @objc internal func previous() {
-        if activeTextField == currencyTextField {
+        if currencyTextField.isFirstResponder {
             totalTextField.becomeFirstResponder()
-        } else if activeTextField == descriptionTextField {
+        } else if descriptionTextField.isFirstResponder {
             currencyTextField.becomeFirstResponder()
         }
     }
     
     @objc internal func forward() {
-        if activeTextField == totalTextField {
+        if totalTextField.isFirstResponder {
             currencyTextField.becomeFirstResponder()
-        } else if activeTextField == currencyTextField {
+        } else if currencyTextField.isFirstResponder {
             descriptionTextField.becomeFirstResponder()
         }
     }
@@ -177,20 +175,18 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
     @objc private func keyboardWillShow(_ notification: Notification) {
         // When keyboard is activated upon a text field being in focus,
         // raise the view so that the keyboard is not blocking the text field
-        if let _ = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, activeTextField != nil {
-            
-            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-                let keyboardRectangle = keyboardFrame.cgRectValue
-                let keyboardHeight = keyboardRectangle.height
-                // Calculate how much to raise based on keyboard height and text field y-position
-                if activeTextField == totalTextField {
-                    view.frame.origin.y = -(totalTextField.frame.origin.y - keyboardHeight)
-                } else if activeTextField == currencyTextField {
-                    view.frame.origin.y = -(currencyTextField.frame.origin.y - keyboardHeight)
-                } else if activeTextField == descriptionTextField {
-                    view.frame.origin.y = -(descriptionTextField.frame.origin.y - keyboardHeight)
-                }
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue, activeTextField != nil {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            // Calculate how much to raise based on keyboard height and text field y-position
+            if activeTextField == totalTextField {
+                view.frame.origin.y = -(totalTextField.frame.origin.y - keyboardHeight)
+            } else if activeTextField == currencyTextField {
+                view.frame.origin.y = -(currencyTextField.frame.origin.y - keyboardHeight)
+            } else if activeTextField == descriptionTextField {
+                view.frame.origin.y = -(descriptionTextField.frame.origin.y - keyboardHeight)
             }
+            
         }
     }
     
@@ -199,4 +195,3 @@ class EntryViewController: UIViewController, UINavigationControllerDelegate, UII
         view.frame.origin.y = 0
     }
 }
-
